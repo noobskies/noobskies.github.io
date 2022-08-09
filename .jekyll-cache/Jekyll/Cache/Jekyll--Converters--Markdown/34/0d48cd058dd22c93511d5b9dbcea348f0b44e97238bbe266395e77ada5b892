@@ -1,0 +1,76 @@
+I"T
+<h1 id="tyler-mcnew">Tyler McNew</h1>
+<p>Focused on building server infrastructures involving AWS, strong familiarity with Linux and Kubernetes systems.</p>
+
+<div id="webaddress">
+<a href="mailto:t.noobskie@gmail.com">t.noobskie@gmail.com</a>
+| <a href="https://stackoverflow.com/users/2656747/noobskie" target="_blank">StackOverflow</a>
+| <a href="https://www.linkedin.com/in/noobskie/" target="_blank">LinkedIn</a>
+| <a href="https://www.baopals.com" target="_blank">Baopals</a>
+</div>
+
+<h2 id="currently">Currently</h2>
+
+<p>Lead back-end developer for <a href="https://www.baopals.com" target="_blank">Baopals</a>, working on maintaining Kubernetes systems as well as entire AWS infrastructures</p>
+
+<h3 id="specialized-in">Specialized in</h3>
+
+<ul>
+  <li>Amazon Web Services</li>
+  <li>Kubernetes</li>
+  <li>Docker</li>
+  <li>Linux</li>
+  <li>EC2</li>
+  <li>EKS</li>
+  <li>Postgres</li>
+  <li>RDS</li>
+  <li>MySQL</li>
+  <li>Lambda</li>
+  <li>Ruby on Rails</li>
+  <li>CSS/HTML</li>
+  <li>Javascript</li>
+</ul>
+
+<h2 id="education">Education</h2>
+
+<p><code class="language-plaintext highlighter-rouge">2009-2014</code>
+<strong>The University of Tennessee, Knoxville.</strong>
+-Bachelor’s Degree, Bachelor of Computer Science</p>
+
+<h2 id="experience">Experience</h2>
+
+<p><code class="language-plaintext highlighter-rouge">Feb 2016 - Present</code>
+<strong>Baopals</strong></p>
+<ul>
+  <li>Co-Founder &amp; Head of Tech Development</li>
+</ul>
+
+<p>baopals.com is the first platform to give foreigners in China an easy and enjoyable way to shop on Taobao and Tmall.<br />All 800 million plus products are available, with up-to-date pricing and product info, in English, and reorganized to make shopping on baopals as easy as pie.</p>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">Jan 2014 - Jan 2015 · 1 yr 1 mo</code>
+<strong>Arobase Communication</strong></p>
+<ul>
+  <li>Senior Web Developer</li>
+</ul>
+
+<p>Developing tailored websites from various clients as well as managing over 30 live
+websites. I coordinate my website development with a highly skilled team of graphic
+designers and project managers.</p>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">Jul 2013 - Nov 2014 · 1 yr 5 mos</code>
+<strong>GymLife</strong></p>
+<ul>
+  <li>Server Engineer</li>
+</ul>
+
+<p>Managed multiple servers running primarily on LEMP stacks with Ubuntu. Installed
+SSL certificates on all websites as well as setting up email servers. Configured Nginx
+HTTP Proxying, Load Balancing, Buffering, Caching as well as monitoring tools to
+ensure speed and availability at all times.</p>
+
+<!-- ### Footer
+
+Last updated: Aug 2022 -->
+:ET

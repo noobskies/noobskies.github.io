@@ -1,91 +1,71 @@
 ---
 layout: cv
-title: Isaac Newtons's CV
+title: Hello, I'm Tyler
 ---
-# Isaac Newton
-Physicist, Mathematician, Cambridge professor.
+# Tyler McNew
+Focused on building server infrastructures involving AWS, strong familiarity with Linux and Kubernetes systems.
 
 <div id="webaddress">
-<a href="isaac@applesdofall.org">isaac@applesdofall.org</a>
-| <a href="http://en.wikipedia.org/wiki/Isaac_Newton">My wikipedia page</a>
+<a href="mailto:t.noobskie@gmail.com">t.noobskie@gmail.com</a>
+| <a href="https://stackoverflow.com/users/2656747/noobskie" target="_blank">StackOverflow</a>
+| <a href="https://www.linkedin.com/in/noobskie/" target="_blank">LinkedIn</a>
+| <a href="https://www.baopals.com" target="_blank">Baopals</a>
 </div>
 
 
 ## Currently
 
-Standing on the shoulders of giants
+Lead back-end developer for <a href="https://www.baopals.com" target="_blank">Baopals</a>, working on maintaining Kubernetes systems as well as entire AWS infrastructures
 
 ### Specialized in
 
-Laws of motion, gravitation, minting coins, disliking [Robert Hooke](http://en.wikipedia.org/wiki/Robert_Hooke)
-
-
-### Research interests
-
-Cooling, power series, optics, alchemy, planetary motions, apples.
-
+- Amazon Web Services
+- Kubernetes
+- Docker
+- Linux
+- EC2
+- EKS
+- Postgres
+- RDS
+- MySQL
+- Lambda
+- Ruby on Rails
+- CSS/HTML
+- Javascript
 
 ## Education
 
-`1654-1660`
-__The King's School, Grantham.__
+`2009-2014`
+__The University of Tennessee, Knoxville.__
+- Bachelor’s Degree, Bachelor of Computer Science
 
-`June 1661 - now`
-__Trinity College, Cambridge__
+## Experience
 
-- Sizar
+`Feb 2016 - Present`
+__Baopals__
+- Co-Founder & Head of Tech Development
 
-`1667 - death`
-__Trinity College, Cambridge__
+baopals.com is the first platform to give foreigners in China an easy and enjoyable way to shop on Taobao and Tmall.<br>All 800 million plus products are available, with up-to-date pricing and product info, in English, and reorganized to make shopping on baopals as easy as pie.
 
-- Fellow
+<br>
+`Jan 2014 - Jan 2015 · 1 yr 1 mo`
+__Arobase Communication__
+- Senior Web Developer
 
+Developing tailored websites from various clients as well as managing over 30 live
+websites. I coordinate my website development with a highly skilled team of graphic
+designers and project managers.
 
+<br>
+`Jul 2013 - Nov 2014 · 1 yr 5 mos`
+__GymLife__
+- Server Engineer
 
-## Awards
-
-`2012`
-President, *Royal Society*, London, UK
-
-Associate, *French Academy of Science*, Paris, France
-
-
-
-## Publications
-
-<!-- A list is also available [online](http://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ) -->
-
-### Journals
-
-`1669`
-Newton Sir I, De analysi per æquationes numero terminorum infinitas. 
-
-`1669`
-Lectiones opticæ.
-
-etc. etc. etc.
-
-### Patents
-
-`2012`
-Infinitesimal calculus for solutions to physics problems, [SMBC](http://www.techdirt.com/articles/20121011/09312820678/if-patents-had-been-around-time-newton.shtml) patent 001
-
-
-## Occupation
-
-`1600`
-__Royal Mint__, London
-
-- Warden
-- Minted coins
-
-`1600`
-__Lucasian professor of Mathematics__, Cambridge University
-
-
+Managed multiple servers running primarily on LEMP stacks with Ubuntu. Installed
+SSL certificates on all websites as well as setting up email servers. Configured Nginx
+HTTP Proxying, Load Balancing, Buffering, Caching as well as monitoring tools to
+ensure speed and availability at all times.
 
 <!-- ### Footer
 
-Last updated: May 2013 -->
-
-
+Last updated: Aug 2022 -->
