@@ -7,6 +7,7 @@ Focused on building server infrastructures involving AWS, strong familiarity wit
 
 <div id="webaddress">
 <a href="mailto:t.noobskie@gmail.com">t.noobskie@gmail.com</a>
+| <a href="tel:+270832698093">t.noobskie@gmail.com</a>
 | <a href="https://stackoverflow.com/users/2656747/noobskie" target="_blank">StackOverflow</a>
 | <a href="https://www.linkedin.com/in/noobskie/" target="_blank">LinkedIn</a>
 | <a href="https://www.baopals.com" target="_blank">Baopals</a>
