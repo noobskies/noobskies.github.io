@@ -3,7 +3,7 @@
    Modern: CSS Grid rows, custom properties, fluid type, responsive
    ============================================================================= */
 
-/* --- Custom Properties --- */
+/* --- Custom Properties: Light (default) --- */
 :root {
   --accent:        #bc412b;
   --accent-dark:   #973321;
@@ -12,6 +12,7 @@
   --text-faint:    #888888;
   --border:        #e0e0e0;
   --bg:            #ffffff;
+  --bg-subtle:     #f7f7f7;
 
   --font-body:     Avenir, 'Helvetica Neue', Verdana, sans-serif;
   --font-mono:     'SF Mono', Monaco, Menlo, monospace;
@@ -26,6 +27,20 @@
   --text-base:     1rem;
   --text-lg:       1.1rem;
   --text-xl:       clamp(1.8rem, 5vw, 2.8rem);
+}
+
+/* --- Dark mode --- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent:        #e8705a;
+    --accent-dark:   #f08070;
+    --text:          #e8e8e8;
+    --text-muted:    #aaaaaa;
+    --text-faint:    #666666;
+    --border:        #333333;
+    --bg:            #1a1a1a;
+    --bg-subtle:     #222222;
+  }
 }
 
 /* --- Reset --- */
@@ -55,6 +70,7 @@ body {
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 a {
@@ -201,10 +217,24 @@ code {
   margin-bottom: 0.5rem;
 }
 
+.github-activity a {
+  display: block;
+}
+
 .github-activity img {
   width: 100%;
   height: auto;
   border-radius: 6px;
+  display: block;
+}
+
+/* Light/dark image toggling */
+.gh-dark  { display: none; }
+.gh-light { display: block; }
+
+@media (prefers-color-scheme: dark) {
+  .gh-light { display: none; }
+  .gh-dark  { display: block; }
 }
 
 /* --- Responsive --- */
