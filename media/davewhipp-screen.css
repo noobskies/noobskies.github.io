@@ -94,6 +94,7 @@ code {
 #content {
   display: grid;
   grid-template-columns: var(--sidebar-w) minmax(0, var(--content-max));
+  grid-auto-flow: row;
   column-gap: var(--gap);
   align-items: start;
   justify-content: center;
@@ -102,12 +103,13 @@ code {
 /* --- Default: every direct child goes to column 2 --- */
 #content > * {
   grid-column: 2;
+  min-width: 0;
 }
 
-/* --- Full-width: h1, subtitle, contact bar --- */
+/* --- Full-width: h1, subtitle (p right after h1), contact bar div --- */
 #content > h1,
 #content > h1 + p,
-#content > #webaddress {
+#content > div#webaddress {
   grid-column: 1 / -1;
 }
 
