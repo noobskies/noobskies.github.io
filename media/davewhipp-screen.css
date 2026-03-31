@@ -239,10 +239,20 @@ strong {
 	flex-direction: column;
 	gap: 0.75em;
 	margin-top: 0.5em;
+	position: relative;
+	left: var(--content-left);
+	width: var(--content-width);
+	max-width: 100%;
 }
 
 .github-activity a {
 	display: block;
+}
+
+.github-activity img {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 @media only screen and (max-width: 700px) {

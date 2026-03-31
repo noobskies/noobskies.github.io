@@ -58,14 +58,4 @@ Managed Ubuntu/LEMP servers, Nginx load balancing/caching, SSL, monitoring.
 
 ## GitHub Activity
 
-<div class="github-activity">
-
-<a href="https://github.com/noobskies" target="_blank" rel="noopener noreferrer">
-  <img src="https://streak-stats.demolab.com/?user=noobskies&hide_border=true&background=FFFFFF&ring=1e3a5f&fire=1e3a5f&currStreakLabel=1e3a5f&sideLabels=555555&dates=888888&stroke=cccccc" alt="GitHub Streak">
-</a>
-
-<a href="https://github.com/noobskies" target="_blank" rel="noopener noreferrer">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=noobskies&theme=github" alt="GitHub Contributions">
-</a>
-
-</div>
+<div class="github-activity"><a href="https://github.com/noobskies" target="_blank" rel="noopener noreferrer"><img src="https://streak-stats.demolab.com/?user=noobskies&hide_border=true&background=FFFFFF&ring=1e3a5f&fire=1e3a5f&currStreakLabel=1e3a5f&sideLabels=555555&dates=888888&stroke=cccccc" alt="GitHub Streak"></a><a href="https://github.com/noobskies" target="_blank" rel="noopener noreferrer"><img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=noobskies&theme=github" alt="GitHub Contributions"></a></div>
