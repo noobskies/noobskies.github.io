@@ -124,6 +124,7 @@ code {
   column-gap: var(--gap);
   align-items: start;
   margin-bottom: 0.5rem;
+  width: 100%;
 }
 
 /* --- Sidebar label --- */
