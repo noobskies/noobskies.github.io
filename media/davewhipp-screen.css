@@ -99,9 +99,26 @@ code {
   justify-content: center;
 }
 
-/* --- Name (h1) + contact bar span full width --- */
-#content h1 {
+/* --- Default: every direct child goes to column 2 --- */
+#content > * {
+  grid-column: 2;
+}
+
+/* --- Full-width: h1, subtitle, contact bar --- */
+#content > h1,
+#content > h1 + p,
+#content > #webaddress {
   grid-column: 1 / -1;
+}
+
+/* --- Sidebar column (col 1): section and subsection headings --- */
+#content > h2,
+#content > h3 {
+  grid-column: 1;
+}
+
+/* --- Name --- */
+#content h1 {
   font-family: var(--font-body);
   font-size: var(--text-xl);
   font-weight: 700;
@@ -112,7 +129,6 @@ code {
 
 /* Subtitle paragraph directly after h1 */
 #content h1 + p {
-  grid-column: 1 / -1;
   font-size: var(--text-lg);
   color: var(--text-muted);
   font-style: italic;
@@ -121,7 +137,6 @@ code {
 
 /* --- Contact bar --- */
 #webaddress {
-  grid-column: 1 / -1;
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--accent);
@@ -139,9 +154,8 @@ code {
   text-decoration: underline;
 }
 
-/* --- Section headings (h2) — sit in the left sidebar column --- */
+/* --- Section headings (h2) --- */
 #content h2 {
-  grid-column: 1;
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 600;
@@ -150,13 +164,11 @@ code {
   color: var(--accent);
   text-align: right;
   padding-top: 0.2rem;
-  /* Visually align with the content beside it */
   line-height: 1.6;
 }
 
-/* Subsection headings (h3) — also in sidebar column */
+/* --- Subsection headings (h3) --- */
 #content h3 {
-  grid-column: 1;
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 400;
@@ -164,13 +176,6 @@ code {
   text-align: right;
   padding-top: 0.2rem;
   line-height: 1.6;
-}
-
-/* --- Content column: explicitly place p, ul, div into column 2 --- */
-#content p,
-#content ul,
-#content > div {
-  grid-column: 2;
 }
 
 #content p {
@@ -243,6 +248,10 @@ code {
 
   #content {
     display: block;
+  }
+
+  #content > * {
+    grid-column: unset;
   }
 
   #content h2 {
