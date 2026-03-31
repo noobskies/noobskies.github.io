@@ -39,7 +39,7 @@ __The University of Tennessee, Knoxville.__
 `Feb 2023 - Present`
 __Novlisky__ — Cloud DevOps Engineer / SRE
 
-Independent practice focused on AI-powered application development and cloud infrastructure. Built Catex, a B2B lead-generation SaaS (Next.js App Router, tRPC, Drizzle ORM, Neon Postgres) with LLM-driven outreach pipelines using Claude Sonnet, SerpAPI, and Firecrawl.
+Independent practice building AI-powered products and cloud infrastructure. Built GPTChina, a localized AI chat platform for China with custom token purchasing, Alipay/WeChat Pay payments, full Mandarin i18n, and China-optimized infrastructure. Also built Catex, a B2B lead-generation SaaS (Next.js App Router, tRPC, Drizzle ORM, Neon Postgres) with AI-driven outreach pipelines using Claude Sonnet, SerpAPI, and Firecrawl.
 
 `Feb 2016 - Present`
 __Baopals__ — Co-Founder & Head of Tech Development
