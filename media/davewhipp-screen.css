@@ -99,7 +99,7 @@ code {
   justify-content: center;
 }
 
-/* --- Name (h1) spans full width --- */
+/* --- Name (h1) + contact bar span full width --- */
 #content h1 {
   grid-column: 1 / -1;
   font-family: var(--font-body);
@@ -141,6 +141,7 @@ code {
 
 /* --- Section headings (h2) — sit in the left sidebar column --- */
 #content h2 {
+  grid-column: 1;
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 600;
@@ -155,6 +156,7 @@ code {
 
 /* Subsection headings (h3) — also in sidebar column */
 #content h3 {
+  grid-column: 1;
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 400;
@@ -164,11 +166,11 @@ code {
   line-height: 1.6;
 }
 
-/* --- Content column (paragraphs, lists, divs) --- */
+/* --- Content column: explicitly place p, ul, div into column 2 --- */
 #content p,
 #content ul,
 #content > div {
-  /* These land in column 2 */
+  grid-column: 2;
 }
 
 #content p {
