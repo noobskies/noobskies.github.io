@@ -18,8 +18,6 @@
 
   <script>
     // ── Theme management ──────────────────────────────────────────────────────
-    var LIGHT_STREAK  = 'https://streak-stats.demolab.com/?user=noobskies&hide_border=true&background=FFFFFF&ring=bc412b&fire=bc412b&currStreakLabel=bc412b&sideLabels=555555&dates=888888&stroke=e0e0e0';
-    var DARK_STREAK   = 'https://streak-stats.demolab.com/?user=noobskies&hide_border=true&background=1a1a1a&ring=e8705a&fire=e8705a&currStreakLabel=e8e8e8&sideLabels=aaaaaa&dates=aaaaaa&stroke=333333&text=e8e8e8';
     var LIGHT_SUMMARY = 'https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=noobskies&theme=github';
     var DARK_SUMMARY  = 'https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=noobskies&theme=github_dark';
 
@@ -34,9 +32,7 @@
 
     function applyTheme(dark) {
       document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-      var streak  = document.getElementById('gh-streak');
       var summary = document.getElementById('gh-summary');
-      if (streak)  streak.src  = dark ? DARK_STREAK  : LIGHT_STREAK;
       if (summary) summary.src = dark ? DARK_SUMMARY : LIGHT_SUMMARY;
       var btn = document.getElementById('theme-toggle');
       if (btn) btn.textContent = dark ? '☀' : '☾';
@@ -99,7 +95,6 @@
 
       content.innerHTML = newHTML;
 
-      // Re-apply theme after DOM restructure (img#gh-streak etc. are now live)
       applyTheme(isDark());
 
       // Inject theme toggle button

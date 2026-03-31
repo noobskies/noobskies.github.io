@@ -58,4 +58,4 @@ Managed Ubuntu/LEMP servers, Nginx load balancing/caching, SSL, monitoring.
 
 ## GitHub Activity
 
-<div class="github-activity"><a href="https://github.com/noobskies" target="_blank" rel="noopener noreferrer"><img id="gh-streak" src="" alt="GitHub Streak"></a><a href="https://github.com/noobskies" target="_blank" rel="noopener noreferrer"><img id="gh-summary" src="" alt="GitHub Contributions"></a></div>
+<div class="github-activity"><a href="https://github.com/noobskies" target="_blank" rel="noopener noreferrer"><img id="gh-summary" src="" alt="GitHub Contributions"></a></div>
