@@ -15,5 +15,58 @@
       {{ content }}
     </article>
   </main>
+  <script>
+    // Restructure flat markdown output into sidebar + content row pairs
+    (function() {
+      var content = document.getElementById('content');
+      if (!content) return;
+
+      var children = Array.from(content.childNodes);
+      var newHTML = '';
+      var i = 0;
+
+      // Collect header block (h1, subtitle p, #webaddress div)
+      while (i < children.length) {
+        var node = children[i];
+        if (node.nodeType === 3) { i++; continue; } // skip text nodes
+        var tag = node.tagName ? node.tagName.toLowerCase() : '';
+        var id = node.id || '';
+
+        if (tag === 'h1' || (tag === 'p' && node.previousElementSibling && node.previousElementSibling.tagName === 'H1') || id === 'webaddress') {
+          newHTML += node.outerHTML;
+          i++;
+        } else {
+          break;
+        }
+      }
+
+      // Now process section blocks: h2 + everything until next h2
+      while (i < children.length) {
+        var node = children[i];
+        if (node.nodeType === 3) { i++; continue; }
+        var tag = node.tagName ? node.tagName.toLowerCase() : '';
+
+        if (tag === 'h2') {
+          var sidebarHTML = node.outerHTML;
+          var bodyHTML = '';
+          i++;
+          while (i < children.length) {
+            var next = children[i];
+            if (next.nodeType === 3) { i++; continue; }
+            var nextTag = next.tagName ? next.tagName.toLowerCase() : '';
+            if (nextTag === 'h2') break;
+            bodyHTML += next.outerHTML;
+            i++;
+          }
+          newHTML += '<div class="cv-row"><div class="cv-label">' + sidebarHTML + '</div><div class="cv-body">' + bodyHTML + '</div></div>';
+        } else {
+          newHTML += node.outerHTML;
+          i++;
+        }
+      }
+
+      content.innerHTML = newHTML;
+    })();
+  </script>
 </body>
 </html>
