@@ -15,12 +15,51 @@
       {{ content }}
     </article>
   </main>
+
   <script>
-    // Restructure flat markdown output into sidebar + content row pairs
+    // ── Theme management ──────────────────────────────────────────────────────
+    var LIGHT_STREAK  = 'https://streak-stats.demolab.com/?user=noobskies&hide_border=true&background=FFFFFF&ring=bc412b&fire=bc412b&currStreakLabel=bc412b&sideLabels=555555&dates=888888&stroke=e0e0e0';
+    var DARK_STREAK   = 'https://streak-stats.demolab.com/?user=noobskies&hide_border=true&background=1a1a1a&ring=e8705a&fire=e8705a&currStreakLabel=e8705a&sideLabels=aaaaaa&dates=666666&stroke=333333';
+    var LIGHT_SUMMARY = 'https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=noobskies&theme=github';
+    var DARK_SUMMARY  = 'https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=noobskies&theme=github_dark';
+
+    function getStoredTheme() { return localStorage.getItem('theme'); }
+    function setStoredTheme(t) { localStorage.setItem('theme', t); }
+
+    function isDark() {
+      var stored = getStoredTheme();
+      if (stored) return stored === 'dark';
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+
+    function applyTheme(dark) {
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      var streak  = document.getElementById('gh-streak');
+      var summary = document.getElementById('gh-summary');
+      if (streak)  streak.src  = dark ? DARK_STREAK  : LIGHT_STREAK;
+      if (summary) summary.src = dark ? DARK_SUMMARY : LIGHT_SUMMARY;
+      var btn = document.getElementById('theme-toggle');
+      if (btn) btn.textContent = dark ? '☀ Light' : '☾ Dark';
+    }
+
+    function toggleTheme() {
+      var dark = !isDark();
+      setStoredTheme(dark ? 'dark' : 'light');
+      applyTheme(dark);
+    }
+
+    // Apply on load
+    applyTheme(isDark());
+
+    // Listen for OS-level changes (only if user hasn't overridden)
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+      if (!getStoredTheme()) applyTheme(e.matches);
+    });
+
+    // ── DOM restructuring: wrap h2 sections into sidebar+body rows ───────────
     (function() {
       var content = document.getElementById('content');
       if (!content) return;
-
       var children = Array.from(content.childNodes);
       var newHTML = '';
       var i = 0;
@@ -28,44 +67,47 @@
       // Collect header block (h1, subtitle p, #webaddress div)
       while (i < children.length) {
         var node = children[i];
-        if (node.nodeType === 3) { i++; continue; } // skip text nodes
+        if (node.nodeType === 3) { i++; continue; }
         var tag = node.tagName ? node.tagName.toLowerCase() : '';
-        var id = node.id || '';
-
-        if (tag === 'h1' || (tag === 'p' && node.previousElementSibling && node.previousElementSibling.tagName === 'H1') || id === 'webaddress') {
-          newHTML += node.outerHTML;
-          i++;
-        } else {
-          break;
-        }
+        var id  = node.id || '';
+        if (tag === 'h1' || id === 'webaddress' || (tag === 'p' && node.previousElementSibling && node.previousElementSibling.tagName === 'H1')) {
+          newHTML += node.outerHTML; i++;
+        } else { break; }
       }
 
-      // Now process section blocks: h2 + everything until next h2
+      // Section rows: each h2 + content until next h2
       while (i < children.length) {
         var node = children[i];
         if (node.nodeType === 3) { i++; continue; }
         var tag = node.tagName ? node.tagName.toLowerCase() : '';
-
         if (tag === 'h2') {
-          var sidebarHTML = node.outerHTML;
-          var bodyHTML = '';
+          var labelHTML = node.outerHTML;
+          var bodyHTML  = '';
           i++;
           while (i < children.length) {
             var next = children[i];
             if (next.nodeType === 3) { i++; continue; }
-            var nextTag = next.tagName ? next.tagName.toLowerCase() : '';
-            if (nextTag === 'h2') break;
+            if (next.tagName && next.tagName.toLowerCase() === 'h2') break;
             bodyHTML += next.outerHTML;
             i++;
           }
-          newHTML += '<div class="cv-row"><div class="cv-label">' + sidebarHTML + '</div><div class="cv-body">' + bodyHTML + '</div></div>';
+          newHTML += '<div class="cv-row"><div class="cv-label">' + labelHTML + '</div><div class="cv-body">' + bodyHTML + '</div></div>';
         } else {
-          newHTML += node.outerHTML;
-          i++;
+          newHTML += node.outerHTML; i++;
         }
       }
 
       content.innerHTML = newHTML;
+
+      // Re-apply theme after DOM restructure (img#gh-streak etc. are now live)
+      applyTheme(isDark());
+
+      // Inject theme toggle button
+      var btn = document.createElement('button');
+      btn.id = 'theme-toggle';
+      btn.textContent = isDark() ? '☀ Light' : '☾ Dark';
+      btn.onclick = toggleTheme;
+      document.getElementById('main').appendChild(btn);
     })();
   </script>
 </body>

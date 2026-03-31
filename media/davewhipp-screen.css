@@ -29,18 +29,40 @@
   --text-xl:       clamp(1.8rem, 5vw, 2.8rem);
 }
 
-/* --- Dark mode --- */
+/* --- Dark mode: OS preference OR manual toggle --- */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --accent:        #e8705a;
-    --accent-dark:   #f08070;
-    --text:          #e8e8e8;
-    --text-muted:    #aaaaaa;
-    --text-faint:    #666666;
-    --border:        #333333;
-    --bg:            #1a1a1a;
-    --bg-subtle:     #222222;
+  :root:not([data-theme='light']) {
+    --accent:      #e8705a;
+    --accent-dark: #f08070;
+    --text:        #e8e8e8;
+    --text-muted:  #aaaaaa;
+    --text-faint:  #666666;
+    --border:      #333333;
+    --bg:          #1a1a1a;
+    --bg-subtle:   #222222;
   }
+}
+
+[data-theme='dark'] {
+  --accent:      #e8705a;
+  --accent-dark: #f08070;
+  --text:        #e8e8e8;
+  --text-muted:  #aaaaaa;
+  --text-faint:  #666666;
+  --border:      #333333;
+  --bg:          #1a1a1a;
+  --bg-subtle:   #222222;
+}
+
+[data-theme='light'] {
+  --accent:      #bc412b;
+  --accent-dark: #973321;
+  --text:        #1a1a1a;
+  --text-muted:  #555555;
+  --text-faint:  #888888;
+  --border:      #e0e0e0;
+  --bg:          #ffffff;
+  --bg-subtle:   #f7f7f7;
 }
 
 /* --- Reset --- */
@@ -230,13 +252,26 @@ code {
   display: block;
 }
 
-/* Light/dark image toggling */
-img.gh-dark  { display: none !important; }
-img.gh-light { display: block !important; }
+/* --- Theme toggle button --- */
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.35rem 0.85rem;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  z-index: 100;
+}
 
-@media (prefers-color-scheme: dark) {
-  img.gh-light { display: none !important; }
-  img.gh-dark  { display: block !important; }
+#theme-toggle:hover {
+  background: var(--border);
+  color: var(--text);
 }
 
 /* --- Responsive --- */
