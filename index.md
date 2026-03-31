@@ -28,6 +28,18 @@ Co-Founder & Head of Tech Development at <a href="https://www.baopals.com" targe
 - CI/CD (Bitbucket Pipelines, GitHub Actions)
 - Sentry / Observability / Site Reliability
 
+## Projects
+
+`GPTChina`
+__AI Chat Platform for China__
+
+Localized AI chat platform built for China-based users. Custom token purchasing system with Alipay and WeChat Pay, tiered pricing, full Mandarin i18n (UI, ToS, privacy policy), domain-restricted registration, and China-optimized infrastructure. Built on top of an open-source foundation with extensive modifications throughout the stack.
+
+`Catex`
+__B2B Lead Generation SaaS__
+
+AI-driven outreach platform for B2B sales teams. Full pipeline from lead discovery to verified contact delivery using SerpAPI, Firecrawl, and Emailable. Discovery flow powered by Claude Sonnet. Stack: Next.js App Router, tRPC, Drizzle ORM, Neon Postgres (Turborepo monorepo).
+
 ## Education
 
 `2009-2014`
@@ -35,11 +47,6 @@ __The University of Tennessee, Knoxville.__
 - Bachelor of Computer Science, GPA 3.54, Cum Laude
 
 ## Experience
-
-`Feb 2023 - Present`
-__Novlisky__ — Cloud DevOps Engineer / SRE
-
-Independent practice building AI-powered products and cloud infrastructure. Built GPTChina, a localized AI chat platform for China with custom token purchasing, Alipay/WeChat Pay payments, full Mandarin i18n, and China-optimized infrastructure. Also built Catex, a B2B lead-generation SaaS (Next.js App Router, tRPC, Drizzle ORM, Neon Postgres) with AI-driven outreach pipelines using Claude Sonnet, SerpAPI, and Firecrawl.
 
 `Feb 2016 - Present`
 __Baopals__ — Co-Founder & Head of Tech Development
