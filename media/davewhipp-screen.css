@@ -16,10 +16,10 @@
   --font-body:     Avenir, 'Helvetica Neue', Verdana, sans-serif;
   --font-mono:     'SF Mono', Monaco, Menlo, monospace;
 
-  --sidebar-w:     160px;
-  --gap:           2rem;
-  --content-max:   640px;
-  --page-h-pad:    clamp(1rem, 5vw, 4rem);
+  --sidebar-w:     140px;
+  --gap:           2.5rem;
+  --content-max:   820px;
+  --page-h-pad:    clamp(1rem, 4vw, 3rem);
   --page-v-pad:    clamp(1.5rem, 4vw, 3rem);
 
   --text-sm:       0.8rem;
@@ -78,7 +78,7 @@ code {
 
 /* --- Page wrapper --- */
 #main {
-  max-width: calc(var(--sidebar-w) + var(--gap) + var(--content-max) + var(--page-h-pad) * 2);
+  max-width: 1100px;
   margin: 0 auto;
   padding: var(--page-v-pad) var(--page-h-pad);
 }
