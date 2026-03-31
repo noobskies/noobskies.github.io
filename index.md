@@ -55,3 +55,9 @@ Developed and managed 30+ live client websites. WordPress/PHP, SEO, coordinated 
 __GymLife__ — Server Engineer
 
 Managed Ubuntu/LEMP servers, Nginx load balancing/caching, SSL, monitoring.
+
+## GitHub Activity
+
+<img src="https://ghchart.rshah.org/noobskies" alt="GitHub Contributions Chart" style="width:100%;max-width:700px;">
+
+<img src="https://github-readme-stats.vercel.app/api?username=noobskies&show_icons=true&hide_border=true&theme=default" alt="GitHub Stats">
