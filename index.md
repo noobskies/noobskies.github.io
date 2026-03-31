@@ -3,12 +3,12 @@ layout: cv
 title: Hello, I'm Tyler
 ---
 # Tyler McNew
-Focused on building server infrastructures involving AWS, strong familiarity with Linux and Kubernetes systems.
+Full-stack engineer and technical co-founder. Building AI-integrated products with TypeScript, React, Next.js, and Kubernetes.
 
 <div id="webaddress">
 <a href="mailto:t.noobskie@gmail.com">t.noobskie@gmail.com</a>
-| <a href="tel:+270832698093">+270832698093</a>
-| <a href="https://stackoverflow.com/users/2656747/noobskie" target="_blank">StackOverflow</a>
+| <a href="tel:+16182179301">618-217-9301</a>
+| <a href="https://github.com/noobskies" target="_blank">GitHub</a>
 | <a href="https://www.linkedin.com/in/noobskie/" target="_blank">LinkedIn</a>
 | <a href="https://www.baopals.com" target="_blank">Baopals</a>
 </div>
@@ -16,57 +16,42 @@ Focused on building server infrastructures involving AWS, strong familiarity wit
 
 ## Currently
 
-Lead back-end developer for <a href="https://www.baopals.com" target="_blank">Baopals</a>, working on maintaining Kubernetes systems as well as entire AWS infrastructures
+Co-Founder & Head of Tech Development at <a href="https://www.baopals.com" target="_blank">Baopals</a>, leading a full platform rebuild in Next.js, TypeScript, and tRPC. Also building AI-powered SaaS products at Novlisky.
 
 ### Specialized in
 
-- Amazon Web Services
-- Kubernetes
-- Docker
-- Linux
-- EC2
-- EKS
-- Postgres
-- RDS
-- MySQL
-- Lambda
-- Ruby on Rails
-- CSS/HTML
-- Javascript
+- TypeScript / Node.js / React / Next.js
+- LLM integration (Anthropic Claude, OpenAI, Groq, Gemini)
+- Amazon Web Services (EKS, EC2, CloudFront, Route53)
+- Kubernetes / Docker / Helm / Terraform
+- tRPC / Prisma / PostgreSQL
+- CI/CD (Bitbucket Pipelines, GitHub Actions)
+- Sentry / Observability / Site Reliability
 
 ## Education
 
 `2009-2014`
 __The University of Tennessee, Knoxville.__
-- Bachelor’s Degree, Bachelor of Computer Science
+- Bachelor of Computer Science, GPA 3.54, Cum Laude
 
 ## Experience
 
+`Feb 2023 - Present`
+__Novlisky__ — Cloud DevOps Engineer / SRE
+
+Independent practice focused on AI-powered application development and cloud infrastructure. Built Catex, a B2B lead-generation SaaS (Next.js App Router, tRPC, Drizzle ORM, Neon Postgres) with LLM-driven outreach pipelines using Claude Sonnet, SerpAPI, and Firecrawl.
+
 `Feb 2016 - Present`
-__Baopals__
-- Co-Founder & Head of Tech Development
+__Baopals__ — Co-Founder & Head of Tech Development
 
-baopals.com is the first platform to give foreigners in China an easy and enjoyable way to shop on Taobao and Tmall.<br>All 800 million plus products are available, with up-to-date pricing and product info, in English, and reorganized to make shopping on baopals as easy as pie.
+Built and scaled an international e-commerce platform from the ground up. Currently leading full V3 rebuild in Next.js, TypeScript, tRPC, and Prisma. Manages 800M+ live products with real-time pricing from upstream marketplace APIs. Infrastructure on AWS EKS (including China cn-north-1 region), CloudFront, WAF, Route53, with CI/CD via Bitbucket Pipelines and Helm.
 
-<br>
-`Jan 2014 - Jan 2015 · 1 yr 1 mo`
-__Arobase Communication__
-- Senior Web Developer
+`Jan 2014 - Jan 2015`
+__Arobase Communication__ — Senior Web Developer
 
-Developing tailored websites from various clients as well as managing over 30 live
-websites. I coordinate my website development with a highly skilled team of graphic
-designers and project managers.
+Developed and managed 30+ live client websites. WordPress/PHP, SEO, coordinated with designers and project managers.
 
-<br>
-`Jul 2013 - Nov 2014 · 1 yr 5 mos`
-__GymLife__
-- Server Engineer
+`Jul 2013 - Nov 2014`
+__GymLife__ — Server Engineer
 
-Managed multiple servers running primarily on LEMP stacks with Ubuntu. Installed
-SSL certificates on all websites as well as setting up email servers. Configured Nginx
-HTTP Proxying, Load Balancing, Buffering, Caching as well as monitoring tools to
-ensure speed and availability at all times.
-
-<!-- ### Footer
-
-Last updated: Aug 2022 -->
+Managed Ubuntu/LEMP servers, Nginx load balancing/caching, SSL, monitoring.
