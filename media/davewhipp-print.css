@@ -1,221 +1,148 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* =============================================================================
+   Tyler McNew — CV Print Stylesheet
+   ============================================================================= */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
+@media print {
+  :root {
+    --accent:      #bc412b;
+    --text:        #000000;
+    --text-muted:  #333333;
+    --text-faint:  #666666;
+    --border:      #cccccc;
+    --sidebar-w:   160px;
+    --gap:         1.5rem;
+  }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
-body {
-	line-height: 1;
-}
+  html {
+    font-size: 10pt;
+  }
 
-ol, ul {
-	list-style: none;
-}
+  body {
+    font-family: Avenir, 'Helvetica Neue', Verdana, sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: var(--text);
+    background: #fff;
+    margin: 0;
+  }
 
-blockquote, q {
-	quotes: none;
-}
+  #main {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
+  #content {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    column-gap: var(--gap);
+    align-items: start;
+  }
 
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+  #content h1 {
+    grid-column: 1 / -1;
+    font-size: 2.2em;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.2rem;
+  }
 
-/* end of reset */
+  #content h1 + p {
+    grid-column: 1 / -1;
+    font-size: 1em;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
 
-:root {
-	--accent-color: #bc412b;
-}
+  #webaddress {
+    grid-column: 1 / -1;
+    font-family: 'SF Mono', Monaco, Menlo, monospace;
+    font-size: 0.75em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
 
-html {
-	box-sizing: border-box;
-}
+  #webaddress a {
+    color: var(--accent);
+    text-decoration: none;
+  }
 
-*, *:before, *:after {
-	box-sizing: inherit;
-}
+  #content h2 {
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    text-align: right;
+    padding-top: 0.15rem;
+    break-after: avoid;
+  }
 
-body {
-	font: normal normal 400;
-	font-size: 12pt;
-	line-height: 1.35em;
-	font-family: Avenir,Verdana,sans-serif;
-}
+  #content h2::after {
+    content: '';
+    display: block;
+    margin-top: 0.3rem;
+    border-bottom: 0.5pt solid var(--border);
+  }
 
-p,
-#webaddress,
-#content > div,
-#content > img {
-	position: relative;
-	left: 25%;
-	max-width: 100%;
-}
+  #content h3 {
+    font-size: 0.75em;
+    font-weight: 400;
+    color: var(--text-faint);
+    text-align: right;
+    padding-top: 0.15rem;
+  }
 
-p {
-	margin-bottom: 0.2em;
-	margin-right: 0;
-	width: 60%;
-}
+  #content p {
+    font-size: 0.9em;
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+    orphans: 3;
+    widows: 3;
+  }
 
-#webaddress,
-#content > div,
-#content > img {
-	width: 60%;
-}
+  #content p > code {
+    font-family: 'SF Mono', Monaco, Menlo, monospace;
+    font-size: 0.8em;
+    color: var(--text-faint);
+    display: block;
+    margin-bottom: 0.1rem;
+  }
 
-#content > img,
-#content > p > img,
-#content > div img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-}
+  #content ul {
+    margin-bottom: 0.75rem;
+  }
 
-#content > p > img,
-#content > div img {
-	width: 100%;
-}
+  #content li {
+    font-size: 0.9em;
+    padding-left: 1em;
+    text-indent: -1em;
+    margin-bottom: 0.2rem;
+    line-height: 1.4;
+  }
 
-code {
-	font: normal normal;
-	font-size: 90%;
-	font-family: Monaco,Menlo,monospace,sans-serif;
-	color: #ccc;
-}
+  #content li::before {
+    content: "– ";
+    color: var(--text-faint);
+  }
 
-p code {
-	position: absolute;
-	text-align: right;
-	right: -20%;
-}
+  /* Hide GitHub activity section when printing */
+  .github-activity,
+  h2:has(+ div.github-activity) {
+    display: none;
+  }
 
-ul {
-	position: relative;
-	left: 25%;
-	width: 75%;
-	margin-bottom: 1em;
-}
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
 
-/*uncomment to get dashes in the list*/
-/*li:before {
-	content: "-";
-	position: relative;
-	left: -0.25em;
-}*/
-
-li {
-	padding-left: 1.25em;
-	text-indent: -1.25em;
-}
-
-li ul {
-	position: relative;
-	left: 0;
-	width: 100%;
-	margin-top: 0.25em;
-}
-
-h1,h2,h3,h4 {
-	font-weight: 400;
-	font-family: Avenir,Cousine,Verdana,sans-serif;
-	width: 80%;
-}
-
-h1 {
-	text-align: left;
-	font-size: 3em;
-	line-height: 1em;
-	position: relative;
-	left: 25%;
-}
-
-h1+p {
-	font-style: italic;
-	font-size: 110%;
-}
-
-h2 {
-	font-size: 1.1em;
-	color: var(--accent-color);
-	margin-top: 2em;
-	position: relative;
-	top: 1.2em;
-	text-align: right;
-	width: 20%;
-}
-
-h3 {
-	font-size: 1em;
-	line-height: 2em;
-	color: #ccc;
-	position: relative;
-	top: 1.6em;
-	text-align: right;
-	width: 20%;
-}
-
-a {
-	color: var(--accent-color);
-	text-decoration:none
-}
-
-a:hover {
-	color: var(--accent-color)
-}
-
-#webaddress {
-	margin-top: 1em;
-	color: var(--accent-color);
-	font-family: Monaco,Menlo,monospace,sans-serif;
-	font-size: 90%;
-}
-
-#webaddress a {
-	text-decoration: none;
-}
-
-em {
-	font-style: normal;
-	color: #2d4e5e
-}
-
-strong {
-	font-weight: bold;
-}
-
-#ghbutton {
-	display: none;
-	visibility: hidden;
+  strong {
+    font-weight: 600;
+  }
 }
