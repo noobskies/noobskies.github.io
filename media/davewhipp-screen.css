@@ -231,12 +231,12 @@ code {
 }
 
 /* Light/dark image toggling */
-.gh-dark  { display: none; }
-.gh-light { display: block; }
+img.gh-dark  { display: none !important; }
+img.gh-light { display: block !important; }
 
 @media (prefers-color-scheme: dark) {
-  .gh-light { display: none; }
-  .gh-dark  { display: block; }
+  img.gh-light { display: none !important; }
+  img.gh-dark  { display: block !important; }
 }
 
 /* --- Responsive --- */
