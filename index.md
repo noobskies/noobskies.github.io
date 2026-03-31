@@ -58,6 +58,14 @@ Managed Ubuntu/LEMP servers, Nginx load balancing/caching, SSL, monitoring.
 
 ## GitHub Activity
 
-<img src="https://ghchart.rshah.org/noobskies" alt="GitHub Contributions Chart" style="width:100%;max-width:700px;">
+<div style="margin-top:8px;">
 
-<img src="https://github-readme-stats.vercel.app/api?username=noobskies&show_icons=true&hide_border=true&theme=default" alt="GitHub Stats">
+<a href="https://github.com/noobskies" target="_blank">
+  <img src="https://streak-stats.demolab.com/?user=noobskies&hide_border=true&background=FFFFFF&ring=1e3a5f&fire=1e3a5f&currStreakLabel=1e3a5f&sideLabels=555555&dates=888888&stroke=cccccc" alt="GitHub Streak" style="width:100%;max-width:700px;display:block;margin-bottom:12px;">
+</a>
+
+<a href="https://github.com/noobskies" target="_blank">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=noobskies&theme=github" alt="GitHub Contributions" style="width:100%;max-width:700px;display:block;">
+</a>
+
+</div>
