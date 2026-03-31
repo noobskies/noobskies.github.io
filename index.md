@@ -8,15 +8,15 @@ Full-stack engineer and technical co-founder. Building AI-integrated products wi
 <div id="webaddress">
 <a href="mailto:t.noobskie@gmail.com">t.noobskie@gmail.com</a>
 | <a href="tel:+16182179301">618-217-9301</a>
-| <a href="https://github.com/noobskies" target="_blank">GitHub</a>
-| <a href="https://www.linkedin.com/in/noobskie/" target="_blank">LinkedIn</a>
-| <a href="https://www.baopals.com" target="_blank">Baopals</a>
+| <a href="https://github.com/noobskies" target="_blank" rel="noopener noreferrer">GitHub</a>
+| <a href="https://www.linkedin.com/in/noobskie/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+| <a href="https://www.baopals.com" target="_blank" rel="noopener noreferrer">Baopals</a>
 </div>
 
 
 ## Currently
 
-Co-Founder & Head of Tech Development at <a href="https://www.baopals.com" target="_blank">Baopals</a>, leading a full platform rebuild in Next.js, TypeScript, and tRPC. Also building AI-powered SaaS products at Novlisky.
+Co-Founder & Head of Tech Development at <a href="https://www.baopals.com" target="_blank" rel="noopener noreferrer">Baopals</a>, leading a full platform rebuild in Next.js, TypeScript, and tRPC. Also building AI-powered SaaS products at Novlisky.
 
 ### Specialized in
 
@@ -58,14 +58,14 @@ Managed Ubuntu/LEMP servers, Nginx load balancing/caching, SSL, monitoring.
 
 ## GitHub Activity
 
-<div style="margin-top:8px;">
+<div class="github-activity">
 
-<a href="https://github.com/noobskies" target="_blank">
-  <img src="https://streak-stats.demolab.com/?user=noobskies&hide_border=true&background=FFFFFF&ring=1e3a5f&fire=1e3a5f&currStreakLabel=1e3a5f&sideLabels=555555&dates=888888&stroke=cccccc" alt="GitHub Streak" style="width:100%;max-width:700px;display:block;margin-bottom:12px;">
+<a href="https://github.com/noobskies" target="_blank" rel="noopener noreferrer">
+  <img src="https://streak-stats.demolab.com/?user=noobskies&hide_border=true&background=FFFFFF&ring=1e3a5f&fire=1e3a5f&currStreakLabel=1e3a5f&sideLabels=555555&dates=888888&stroke=cccccc" alt="GitHub Streak">
 </a>
 
-<a href="https://github.com/noobskies" target="_blank">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=noobskies&theme=github" alt="GitHub Contributions" style="width:100%;max-width:700px;display:block;">
+<a href="https://github.com/noobskies" target="_blank" rel="noopener noreferrer">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=noobskies&theme=github" alt="GitHub Contributions">
 </a>
 
 </div>

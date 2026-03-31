@@ -23,26 +23,35 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-body, html { overflow-x: hidden; }
+
+body, html {
+	overflow-x: hidden;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -50,30 +59,75 @@ table {
 
 /* end of reset */
 
+:root {
+	--accent-color: #bc412b;
+	--accent-color-hover: #973321;
+	--content-left: 25%;
+	--content-width: 55%;
+	--sidebar-width: 20%;
+}
 
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
 
 body {
 	font: normal normal 400;
 	font-size: 100%;
 	line-height: 1.5em;
-	/*also written as...  font: normal normal 400 100%/1.5em;*/
 	font-family: Avenir,Verdana,sans-serif;
 	margin-top: 1em;
 	margin-left: 1em;
 }
 
-p {
+#main {
+	max-width: 1200px;
+}
+
+p,
+#webaddress,
+#content > div,
+#content > img {
 	position: relative;
-	left: 25%;
+	left: var(--content-left);
+	width: var(--content-width);
+	max-width: 100%;
+}
+
+p {
 	margin-bottom: 0.7em;
 	margin-right: 0;
-	width: 55%;
+}
+
+#content > div,
+#content > img {
+	margin-bottom: 1.5em;
+}
+
+#content > img,
+#content > p > img,
+#content > div img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+#content > p > img,
+#content > div img {
+	width: 100%;
+}
+
+#content > p > img {
+	margin-top: 0.7em;
 }
 
 code {
 	font: normal normal;
 	font-size: 90%;
-	/*line-height: 1em;*/
 	font-family: Monaco,Menlo,monospace,sans-serif;
 	color: #aaa;
 }
@@ -84,10 +138,9 @@ p code {
 	right: -20%;
 }
 
-
 ul {
 	position: relative;
-	left: 25%;
+	left: var(--content-left);
 	width: 75%;
 	margin-bottom: 1.5em;
 	margin-top: -0.5em;
@@ -101,10 +154,8 @@ ul {
 }*/
 
 li {
-	/*second line indent*/
 	padding-left: 1.25em;
 	text-indent: -1.25em;
-	/*color: #777;*/
 }
 
 li ul {
@@ -125,23 +176,22 @@ h1 {
 	font-size: 3em;
 	line-height: 1em;
 	position: relative;
-	left: 25%;
+	left: var(--content-left);
 }
 
 h1+p {
-	/*subtitle*/
 	font-style: italic;
 	font-size: 110%;
 }
 
 h2 {
 	font-size: 1.1em;
-	color: #bc412b;
+	color: var(--accent-color);
 	margin-top: 3em;
 	position: relative;
 	top: 1.4em;
 	text-align: right;
-	width: 20%;
+	width: var(--sidebar-width);
 }
 
 h3 {
@@ -150,23 +200,20 @@ h3 {
 	position: relative;
 	top: 1.7em;
 	text-align: right;
-	width: 20%;
+	width: var(--sidebar-width);
 }
 
 a {
-	color: inherit;
-	/*text-decoration:none*/
+	color: var(--accent-color);
 }
 
 a:hover {
-	color:#39f
+	color: var(--accent-color-hover);
 }
 
 #webaddress {
 	margin-top: 1em;
-	position: relative;
-	left: 25%;
-	color: #bc412b;
+	color: var(--accent-color);
 	font-family: Monaco,Menlo,monospace,sans-serif;
 	font-size: 100%;
 }
@@ -176,7 +223,6 @@ a:hover {
 }
 
 em {
-	/* font-weight: bold; */
 	font-style: italic;
 }
 
@@ -188,9 +234,70 @@ strong {
 	display: none;
 }
 
+.github-activity {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75em;
+	margin-top: 0.5em;
+}
 
+.github-activity a {
+	display: block;
+}
 
-/*
-@media only screen and (max-width: 480px) {
-	make one column somehow...
-}*/
+@media only screen and (max-width: 700px) {
+	body {
+		font-size: 95%;
+		margin: 0.75em;
+	}
+
+	p,
+	ul,
+	h1,
+	h2,
+	h3,
+	h4,
+	#webaddress,
+	#content > div,
+	#content > img {
+		left: auto;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	p code {
+		position: static;
+		display: block;
+		margin-bottom: 0.35em;
+		text-align: left;
+	}
+
+	ul {
+		margin-top: 0;
+		margin-bottom: 1.25em;
+	}
+
+	h1 {
+		font-size: 2.3em;
+	}
+
+	h2,
+	h3 {
+		top: auto;
+		width: 100%;
+		margin-top: 1.75em;
+		text-align: left;
+	}
+
+	h3 {
+		line-height: 1.6em;
+	}
+
+	#webaddress {
+		line-height: 1.8em;
+	}
+
+	.github-activity {
+		gap: 0.65em;
+	}
+}
